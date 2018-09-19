@@ -13,7 +13,11 @@ namespace ErrorHandleForWeb
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //GlobalFilters.Filters.Add(new HandleErrorAttribute());
+            GlobalFilters.Filters.Add(new HandleErrorAttribute());
+        }
+        protected void Application_Error()
+        {
+            Response.Redirect("~/404.html");
         }
     }
 }

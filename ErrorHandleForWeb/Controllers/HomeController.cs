@@ -24,7 +24,7 @@ namespace ErrorHandleForWeb.Controllers
         }
 
         //可以自訂要顯示處理錯誤的View
-        [HandleError(View="Error2")]
+        //[HandleError(View="Error2")]
         public ActionResult ExceptionDemo2()
         {
             int i = 0;
